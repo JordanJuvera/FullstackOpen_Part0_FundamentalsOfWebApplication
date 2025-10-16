@@ -1,27 +1,16 @@
-sequenceDiagram
-    participant browser
-    participant server
+# Sequence Diagrams Exercises
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
-    activate server
-    server-->>browser: HTML document
-    deactivate server
+This repository contains sequence diagram exercises.  
+Each exercise is available as a separate `.md` file that includes the corresponding diagram directly viewable on GitHub.
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
-    activate server
-    server-->>browser: the css file
-    deactivate server
+## How to Review the Exercises
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
-    activate server
-    server-->>browser: the JavaScript file
-    deactivate server
+To review each exercise:
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+1. Navigate to the corresponding `.md` file in the repository.  
+2. GitHub will automatically render the sequence diagram within the file.  
+3. Each file is named according to the exercise number and part, following this format:
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
-    activate server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
-    deactivate server
 
-    Note right of browser: The browser executes the callback function that renders the notes
+For example:  
+- `exercise_0.4.md` → corresponds to exercise 0.4, part 0.
